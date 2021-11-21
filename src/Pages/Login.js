@@ -1,27 +1,40 @@
+import React, {useState} from 'react';
 import '../Assets/css/Login.css';
+import axios from 'axios';
+import { Email } from '@material-ui/icons';
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
+function Login(){
+  const [uName, setUName] = useState("");
+  const [uPwdHash, setUPwdHash] = useState("");
 
-function Login() {
-    return (
-        <div className="Login">
-          <header className="Login-header">
-            <div className="container">
-              <h1>Welcome!</h1>
-              <div className="form-group">
-                <input placeholder="Username" type="text" className="form-control"/>
-                <br/>
-                <input placeholder="Password" type="password" className="form-control"/>
-                <br/>
-                <button className="loginbtn">Login</button>
-                <br/>
-                <Link to="/home">Click here if you are a developer</Link>
-              </div>
+  const login = () => {
+    axios.post("https://los-techos.herokuapp.com/api/login", {
+      name: uName,
+      password: uPwdHash,
+    }).then((response) => {
+      console.log(response);
+    });
+  }
+
+  return (
+    <div className="Login">
+    <header className="Login-header">
+      <form>
+          <div className="container">
+            <h1>Welcome!</h1>
+            <div className="form-group">
+              <input placeholder="Name" type="text" onChange={(e) => {setUName(e.target.value);}}/>
+              <br/>
+              <input placeholder="Password" type="password" onChange={(e) => {setUPwdHash(e.target.value);}}/>
+              <br/>
+              <button className="loginbtn" onClick={login}>Login</button> 
             </div>
-          </header>
-        </div>
-      );
+          </div>
+      </form>
+    </header>
+    </div>
+  );
 }
 
 export default Login;
