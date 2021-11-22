@@ -1,5 +1,4 @@
 
-import axios from "axios";
 import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

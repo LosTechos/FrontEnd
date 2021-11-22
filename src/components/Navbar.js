@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {AppBar, Toolbar, IconButton, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import User from '@material-ui/icons/SupervisedUserCircleOutlined';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { LocalDiningOutlined } from '@material-ui/icons';
 
 import { useNavigate } from "react-router-dom"
 
@@ -33,9 +32,12 @@ const useStyles= makeStyles(()=>({
 
 
 
+
 function Navbar(){
 
     const navigate = useNavigate();
+    
+    const role = localStorage.getItem("roId");
 
     const logout = () => {
         localStorage.clear();
@@ -43,7 +45,10 @@ function Navbar(){
       }
    
     const classes=useStyles();
-    return (
+    
+    if(role===1){
+        return (
+        
         <div className={classes.root}>
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
@@ -59,17 +64,44 @@ function Navbar(){
                     </Typography>
 
                     <Link to="/register">Register New User or House</Link>
-
-                    <Link to="/profile">
-                        <IconButton color="#6d6e70">
-                            <User fontSize='large'/>
-                        </IconButton>
-                    </Link>
+                    
+                        
+                    <IconButton color="#6d6e70">
+                        <User fontSize='large'/>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <button onClick={logout}>Logout</button>
         </div>
-    );
+    );}
+    else{
+        return (
+        
+            <div className={classes.root}>
+                <AppBar position="static" className={classes.appBar}>
+                    <Toolbar>
+                        <IconButton edge="start" className={classes.menuButton} color="#6d6e70">
+                            <MenuIcon fontSize='large' />
+                        </IconButton>
+    
+                        <Link to="/home">Home</Link>
+                        <Link to="/payments">Payments</Link>
+    
+                        <Typography variant="h6" className={classes.title}>
+                            
+                        </Typography>
+    
+                        
+                            
+                        <IconButton color="#6d6e70">
+                            <User fontSize='large'/>
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+                <button onClick={logout}>Logout</button>
+            </div>
+        );
+    }
 }
 
 export default Navbar;
