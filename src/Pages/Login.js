@@ -52,9 +52,9 @@ class Login extends React.Component{
           <div className="container">
             <h1>Welcome!</h1>
             <div className="form-group">
-              <input placeholder="Name" type="text" name="uName" onChange={this.handlerChange}/>
+              <input className="loginplace" placeholder="Name" type="text" name="uName" onChange={this.handlerChange}/>
               <br/>
-              <input placeholder="Password" type="password" name="uPwdHash" onChange={this.handlerChange}/>
+              <input className="loginplace" placeholder="Password" type="password" name="uPwdHash" onChange={this.handlerChange}/>
               <br/>
               <button className="loginbtn" onClick={this.handlerButton}>Login</button> 
             </div>

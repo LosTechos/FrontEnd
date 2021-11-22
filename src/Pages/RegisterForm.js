@@ -50,31 +50,33 @@ const RegisterForm = () => {
             <header className="Register-header">
                 <div className="containerMain">
                     <form className="user-form" onSubmit={peticionPost}>
-                        <h1>Add New User</h1>
+                        <h1>Create new user</h1>
+                        <h3>Enter your personal information</h3>
                         <input name="uName" placeholder="Full Name" type="text" className="form-control"
                                onChange={handleChange} value={state.form.uName}/>
-                        <br/>
+                        
                         <input name="uPwdHash" placeholder="Password" type="password" className="form-control"
                                onChange={handleChange} value={state.form.uPwdHash}/>
-                        <br/>
+                        
                         <input name="uEmail" placeholder="Mail" type="text" className="form-control"
                                onChange={handleChange} value={state.form.uEmail}/>
-                        <br/>
+                        
                         <input name="uPhone" placeholder="Phone" type="text" className="form-control"
                                onChange={handleChange} value={state.form.uPhone}/>
-                        <br/>
+                        
                         <input name="roId" placeholder="Role" type="text" className="form-control"
                                onChange={handleChange} value={state.form.roId}/>
-                        <br/>
+
+                        <h3>Enter your personal information</h3>
                         <input name="hNumber" placeholder="Exterior Number" type="text" className="form-control"
                                onChange={handleChange} value={state.form.hNumber}/>
-                        <br/>
+                        
                         <input name="hAddress" placeholder="Street" type="text" className="form-control"
                                onChange={handleChange} value={state.form.hAddress}/>
-                        <br/>
+                        
                         <input name="hMonthlyMount" placeholder="Monthly Amount" type="text" className="form-control"
                                onChange={handleChange} value={state.form.hMonthlyMount}/>
-                        <br/>
+                        
                         <button className="Submitbtn" type="submit">Submit User</button>
                     </form>
                 </div>
