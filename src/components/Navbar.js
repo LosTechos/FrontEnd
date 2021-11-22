@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {AppBar, Toolbar, IconButton, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import User from '@material-ui/icons/SupervisedUserCircleOutlined';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { LocalDiningOutlined } from '@material-ui/icons';
 
 import { useNavigate } from "react-router-dom"
 
@@ -47,7 +46,7 @@ function Navbar(){
    
     const classes=useStyles();
     
-    if(role===1){
+    if(role==1){
         return (
         
         <div className={classes.root}>
