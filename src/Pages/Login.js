@@ -24,10 +24,10 @@ function Login(){
           <div className="container">
             <h1>Welcome!</h1>
             <div className="form-group">
-              <input placeholder="Name" type="text" onChange={(e) => {setUName(e.target.value);}}/>
-              <br/>
-              <input placeholder="Password" type="password" onChange={(e) => {setUPwdHash(e.target.value);}}/>
-              <br/>
+              <input placeholder=" Name" className="loginplace" type="text" onChange={(e) => {setUName(e.target.value);}}/>
+              
+              <input placeholder=" Password" className="loginplace" type="password" onChange={(e) => {setUPwdHash(e.target.value);}}/>
+              
               <button className="loginbtn" onClick={login}>Login</button> 
             </div>
           </div>

@@ -65,30 +65,31 @@ render(){
           <header className="Register-header">
             <div className="containerMain">
               <div className="user-form">
-                <h1>Add New User</h1>
+                <h1>Create new user</h1>
+                <h3>Enter your personal information</h3>
                 <input name="uName" placeholder="Full Name" type="text" className="form-control" onChange={this.handleChange} value={form.uName}/>
-                <br/>
+               
                 <input name="uPwdHash" placeholder="Password" type="password" className="form-control" onChange={this.handleChange} value={form.uPwdHash}/>
-                <br/>
+               
                 <input name="uEmail" placeholder="Mail" type="text" className="form-control" onChange={this.handleChange} value={form.uEmail}/>
-                <br/>
+               
                 <input name="uPhone" placeholder="Phone" type="text" className="form-control" onChange={this.handleChange} value={form.uPhone}/>
-                <br/>
+               
                 <input name="roId" placeholder="Role" type="text" className="form-control" onChange={this.handleChange} value={form.roId}/>
-                <br/>
+                
                 <button className="Submitbtn" onClick={()=>this.peticionPost()}>Submit User</button>
               </div>
               <div className="house-form">
-                <br/>
-                <h1>Add New House</h1>
+               
+                <h3>Enter your address information</h3>
                 <input name="hNumber" placeholder="Exterior Number" type="text" className="form-control" onChange={this.handleChange} value={form.hNumber}/>
-                <br/>
+                
                 <input name="hAddress" placeholder="Street" type="text" className="form-control" onChange={this.handleChange} value={form.hAddress}/>
-                <br/>
+               
                 <input name="hDebt" placeholder="Debt" type="text" className="form-control" onChange={this.handleChange} value={form.hDebt}/>
-                <br/>
+             
                 <input name="hMonthlyMount" placeholder="Monthly Amount" type="text" className="form-control" onChange={this.handleChange} value={form.hMonthlyMount}/>
-                <br/>
+               
                 <button className="Submitbtn" onClick={()=>this.peticionPostH()}>Submit House</button>
               </div>
             </div>
