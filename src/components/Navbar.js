@@ -59,11 +59,12 @@ function Navbar(){
                     </Typography>
 
                     <Link to="/register">Register New User or House</Link>
-                    
-                        
-                    <IconButton color="#6d6e70">
-                        <User fontSize='large'/>
-                    </IconButton>
+
+                    <Link to="/profile">
+                        <IconButton color="#6d6e70">
+                            <User fontSize='large'/>
+                        </IconButton>
+                    </Link>
                 </Toolbar>
             </AppBar>
             <button onClick={logout}>Logout</button>

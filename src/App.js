@@ -4,9 +4,10 @@ import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './Pages/Login';
-import Register from './Pages/RegUserHouse';
+import Register from './Pages/RegisterForm';
 import Home from './Pages/Dashboard';
 import Payments from './Pages/Ticketadmin';
+import Profile from "./Pages/Profile";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="home" element={<Home/>}/>
       <Route path="register" element={<Register/>}/>
       <Route path="payments" element={<Payments/>}/>
+      <Route path="profile" element={<Profile/>}/>
     </Routes>
   </Router>
   

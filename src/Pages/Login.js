@@ -8,10 +8,11 @@ function Login(){
   const [uName, setUName] = useState("");
   const [uPwdHash, setUPwdHash] = useState("");
 
-  const login = () => {
+  const login = (e) => {
+    e.preventDefault()
     axios.post("https://los-techos.herokuapp.com/api/login", {
-      name: uName,
-      password: uPwdHash,
+      uName: uName,
+      uPwdHash: uPwdHash,
     }).then((response) => {
       console.log(response);
     });
