@@ -1,0 +1,63 @@
+:root{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.box-payment--ok{
+    border: 2px solid green;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 6px;
+    position: relative;
+    background-color: whitesmoke;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-payment--error{
+    border: 2px solid red;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 6px;
+    position: relative;
+    background-color: whitesmoke;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.box-payment__main-text{
+    font-size: 1.6rem;
+    align-self: center;
+    margin: 0;
+}    
+
+.box-payment__text-date{
+    position: absolute;
+    bottom: 0;
+     align-self: flex-end; 
+     justify-self: flex-end; 
+     margin-right: 10px;
+}     
+
+.box-payment__price{
+    font-size: 1.6rem;
+    color: red;
+    text-align: center;
+    margin: 0;
+}
+
+.btn{
+    max-width: 100px;
+    
+}
+
+.btnContainer{
+    align-self: center;
+    margin-top: 20px;
+
+}
