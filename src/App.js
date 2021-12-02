@@ -7,6 +7,7 @@ import Register from './Pages/RegisterForm';
 import Home from './Pages/Dashboard';
 import Payments from './Pages/Ticketadmin';
 import Profile from "./Pages/Profile";
+import AdminDebts from "./Pages/AdminDebts"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="register" element={<Register/>}/>
       <Route path="payments" element={<Payments/>}/>
       <Route path="profile" element={<Profile/>}/>
+      <Route path="admin" element={<AdminDebts/>}/>
     </Routes>
   </Router>
   
