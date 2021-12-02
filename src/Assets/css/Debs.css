@@ -4,25 +4,28 @@
 }
 
 .box-payment--ok{
-    border: 2px solid green;
+    border: none;
     margin: auto;
-    max-width: 800px;
+    max-width: 400px;
     border-radius: 6px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: relative;
-    background-color: whitesmoke;
-    height: 300px;
+    background-color:white;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .box-payment--error{
-    border: 2px solid red;
+    border: none;
     margin: auto;
-    max-width: 800px;
+    max-width: 400px;
     border-radius: 6px;
     position: relative;
-    background-color: whitesmoke;
-    height: 300px;
+    border: gray;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgb(248, 245, 245);
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +36,7 @@
 .box-payment__main-text{
     font-size: 1.6rem;
     align-self: center;
-    margin: 0;
+    margin: 2%;
 }    
 
 .box-payment__text-date{
@@ -46,18 +49,16 @@
 
 .box-payment__price{
     font-size: 1.6rem;
-    color: red;
+    color: rgb(212, 39, 39);
     text-align: center;
     margin: 0;
 }
 
-.btn{
-    max-width: 100px;
-    
-}
 
 .btnContainer{
     align-self: center;
     margin-top: 20px;
+     text-decoration:none;
+    
 
 }

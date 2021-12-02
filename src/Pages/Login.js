@@ -3,25 +3,25 @@ import '../Assets/css/Login.css';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom"
 
-class Login extends React.Component{
+class Login extends React.Component {
 
-  
-  state={
-    form:{
-      "uName":"",
-      "uPwdHash":""
+
+  state = {
+    form: {
+      "uName": "",
+      "uPwdHash": ""
     },
-    error:false,
-    errorMsg:""
+    error: false,
+    errorMsg: ""
   }
 
-  handlerSubmit(e){
+  handlerSubmit(e) {
     e.preventDefault();
   }
 
-  handlerChange = async e =>{
+  handlerChange = async e => {
     await this.setState({
-      form:{
+      form: {
         ...this.state.form,
         [e.target.name]: e.target.value
       }
@@ -29,68 +29,69 @@ class Login extends React.Component{
     //console.log(this.state.form);
   }
 
-  handlerButton=()=>{
+  handlerButton = () => {
     let url = "https://los-techos.herokuapp.com/api/login";
-    axios.post(url,this.state.form)
-    .then(response=>{
-      if(response.data.access === true){
-        console.log(response);
-        localStorage.setItem("access-token",response.data.token);
-        localStorage.setItem("roId",response.data.roId);
-        this.props.navigate('home');
-      }else{
+    axios.post(url, this.state.form)
+      .then(response => {
+        if (response.data.access === true) {
+          console.log(response);
+          localStorage.setItem("access-token", response.data.token);
+          localStorage.setItem("roId", response.data.roId);
+          this.props.navigate('home');
+        } else {
 
+          this.setState({
+            error: true,
+            errorMsg: response.data.message
+          })
+        }
+
+      }).catch(error => {
+        console.log(error)
         this.setState({
           error: true,
-          errorMsg: response.data.message
+          errorMsg: "Error connecting to the Service"
         })
-      }
 
-    }).catch(error=>{
-      console.log(error)
-      this.setState({
-        error: true,
-        errorMsg: "Error connecting to the Service"
       })
-
-    })
   }
 
 
-  render (){
+  render() {
 
-    return(
+    return (
       <React.Fragment>
         <div className="Login">
-    <header className="Login-header">
-      <form onSubmit={this.handlerSubmit}>
-          <div className="container">
-            <h1>Welcome!</h1>
-            <div className="form-group">
-              <input className="loginplace" placeholder="Name" type="text" name="uName" onChange={this.handlerChange}/>
-              <br/>
-              <input className="loginplace" placeholder="Password" type="password" name="uPwdHash" onChange={this.handlerChange}/>
-              <br/>
-              <button className="loginbtn" onClick={this.handlerButton}>Login</button> 
-            </div>
+          <header className="Login-header">
+            <form onSubmit={this.handlerSubmit}>
+              <div className="container">
 
-            {this.state.error == true &&
-              <div class="alert alert-danger" role="alert">
+                <div className="form-group">
+                  <input className="loginplace" placeholder="User" type="text" name="uName" onChange={this.handlerChange} />
+
+                  <input className="loginplace" placeholder="Password" type="password" name="uPwdHash" onChange={this.handlerChange} />
+
+                  <p className="p">Forgot password?</p>
+                  <button className="loginbtn" onClick={this.handlerButton}>Login</button>
+                </div>
+
+                {this.state.error == true &&
+                  <div class="alert alert-danger" role="alert">
                     {this.state.errorMsg}
-              </div>}
+                  </div>}
 
-          </div>
-      </form>
-    </header>
-    </div>
+              </div>
+            </form>
+          </header>
+        </div>
       </React.Fragment>
     );
   }
 }
 
-function WithNavigate(props){
+function WithNavigate(props) {
   let navigate = useNavigate();
-  return<Login{...props} navigate={navigate}/>
+  return <Login{...props} navigate={navigate} />
 }
 
 export default WithNavigate;

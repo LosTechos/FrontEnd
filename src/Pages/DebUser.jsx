@@ -58,9 +58,9 @@ const DebUser = () => {
                                 <p className="box-payment__main-text"> Late Payment </p>
                                 <p className="box-payment__price" >  $ {mAmount} mxn </p>
                                 <Link to="/payments" className="btnContainer">
-                                    <Button color="Primary" variant="contained" className="btn">Upload Ticket</Button>
+                                    <Button variant="contained" color="secondary" className="btn">Upload ticket</Button>
                                 </Link>
-                                <p className="box-payment__text-date"> Next payment date: November 10 2021 </p>
+                                <p className="box-payment__text-date"> Next payment date: December 10 2021 </p>
                             </div>
                 }
             </Container>
