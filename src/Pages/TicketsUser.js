@@ -1,55 +1,84 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../Assets/css/TicketsUser.css';
 import axios from 'axios';
 
-class TicketsUser extends Component {
-    //PARTE DEL TUTO
-    state = {
-        selectedFile: null
-    }
+function TicketsUser() {
+    //PARTE DEL TUTO DEL SEMI INDIO
 
-    fileSelectedHandler = event => {
-        this.setState({
-            selectedFile: event.target.files[0]
+    
+    //FIN DEL TUTO
+
+    //PARTE DEL TUTO DE MEDIUM
+    const [postImage, setPostImage] = useState({
+        myFile: "",
+      });
+
+    const url = 'https://los-techos.herokuapp.com/api/upload';
+    const createImage = (newImage) => axios.put(url, {pImage: newImage, uId: localStorage.getItem("id")}, {headers: {"access-token": localStorage.getItem("access-token")}}).then(r => {console.log(r.data)});
+
+    const createPost = async (post) => {
+        try {
+            await createImage(post);
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        createPost(postImage);
+    };
+
+    const convertBase64=(file) => {
+        return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+
+            fileReader.readAsDataURL(file);
+
+            fileReader.onload = ()=>{
+                resolve(fileReader.result);
+                
+            };
+
+            fileReader.onerror = (error)=>{
+                reject(error);
+            };
         })
-    }
+    };
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0];
+        const base64 = await convertBase64(file);
+        setPostImage({ ...postImage, myFile: base64 });
+        console.log(base64);
+    };
 
-    fileUplaodHandler = event => {
-        const fd = new FormData();
-        fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
-        axios.put('https://los-techos.herokuapp.com/api/ticket', fd, {
-            onUploadProgress: ProgressEvent => {
-                console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total * 100) + '%')
-            }
-        })
-            .then(res => {
-                console.log(res);
-            });
-    }
-    //FIN DE PARTE DEL TUTO
+    
+    //FIN DEL TUTO
 
-    render() { 
-        return (
+    return ( 
         <div>
             <Navbar/>
             <div className="tickets-box">
                 <div className="top-box">
-                    <text>UsernameGoesHere you have Paid/NotPaid</text>
+                    <text>Ticket Submition</text>
                 </div>
                 <div className="line-section"></div>
                 <div className="mid-box">
                     <text>Payment due DATE</text>
                     <br/>
-                    <input type="file" onChange={this.fileSelectedHandler}/>
-                </div>
-                <div className="bottom-box">
-                    <button className="send-ticket-btn" onClick={this.fileUplaodHandler}>Send ticket</button>
+                    <form onSubmit={handleSubmit}>
+                        <input type="file" name="myFile" onChange={(e) =>{
+                            handleFileUpload(e);
+                        }}/>
+                        <div className="bottom-box">
+                            <button className="send-ticket-btn">Send ticket</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    );
-    }
+     );
 }
- 
+
 export default TicketsUser;

@@ -37,6 +37,7 @@ class Login extends React.Component{
         console.log(response);
         localStorage.setItem("access-token",response.data.token);
         localStorage.setItem("roId",response.data.roId);
+        localStorage.setItem("id",response.data.id);
         this.props.navigate('home');
       }else{
 
