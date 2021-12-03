@@ -46,7 +46,7 @@ function Navbar(){
    
     const classes=useStyles();
     
-    if(role===1){
+    if(role==1){
         return (
         
         <div className={classes.root}>

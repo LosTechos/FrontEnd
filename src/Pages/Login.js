@@ -33,10 +33,26 @@ class Login extends React.Component{
     let url = "https://los-techos.herokuapp.com/api/login";
     axios.post(url,this.state.form)
     .then(response=>{
-      console.log(response);
-      localStorage.setItem("access-token",response.data.token);
-      localStorage.setItem("roId",response.data.roId);
-      this.props.navigate('home');
+      if(response.data.access === true){
+        console.log(response);
+        localStorage.setItem("access-token",response.data.token);
+        localStorage.setItem("roId",response.data.roId);
+        localStorage.setItem("id",response.data.id);
+        this.props.navigate('home');
+      }else{
+
+        this.setState({
+          error: true,
+          errorMsg: response.data.message
+        })
+      }
+
+    }).catch(error=>{
+      console.log(error)
+      this.setState({
+        error: true,
+        errorMsg: "Error connecting to the Service"
+      })
 
     })
   }
@@ -58,6 +74,12 @@ class Login extends React.Component{
               <br/>
               <button className="loginbtn" onClick={this.handlerButton}>Login</button> 
             </div>
+
+            {this.state.error == true &&
+              <div class="alert alert-danger" role="alert">
+                    {this.state.errorMsg}
+              </div>}
+
           </div>
       </form>
     </header>
