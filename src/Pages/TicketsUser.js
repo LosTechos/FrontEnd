@@ -4,12 +4,6 @@ import '../Assets/css/TicketsUser.css';
 import axios from 'axios';
 
 function TicketsUser() {
-    //PARTE DEL TUTO DEL SEMI INDIO
-
-    
-    //FIN DEL TUTO
-
-    //PARTE DEL TUTO DE MEDIUM
     const [postImage, setPostImage] = useState({
         myFile: "",
       });
@@ -52,9 +46,6 @@ function TicketsUser() {
         setPostImage({ ...postImage, myFile: base64 });
         console.log(base64);
     };
-
-    
-    //FIN DEL TUTO
 
     return ( 
         <div>
