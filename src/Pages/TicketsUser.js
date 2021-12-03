@@ -9,19 +9,12 @@ function TicketsUser() {
       });
 
     const url = 'https://los-techos.herokuapp.com/api/upload';
-    const createImage = (newImage) => axios.put(url, {pImage: newImage, uId: localStorage.getItem("id")}, {headers: {"access-token": localStorage.getItem("access-token")}}).then(r => {console.log(r.data)});
-
-    const createPost = async (post) => {
-        try {
-            await createImage(post);
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
 
     const handleSubmit = (e) => {
+        let pene = postImage["myFile"]
         e.preventDefault();
-        createPost(postImage);
+        //createPost(postImage);
+        axios.put(url, {pImage: pene.split(",")[1], uId: localStorage.getItem("id")}, {headers: {"access-token": localStorage.getItem("access-token")}}).then(r => {console.log(r.data)});
     };
 
     const convertBase64=(file) => {
