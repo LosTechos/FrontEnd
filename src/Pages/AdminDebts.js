@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const url = 'https://los-techos.herokuapp.com/api/debt'
 const AdminDebts = () => {
@@ -28,6 +29,8 @@ const AdminDebts = () => {
 
     return (
         <div>
+            <Navbar/>
+            <h2>Debts</h2>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                     <TableHead>
