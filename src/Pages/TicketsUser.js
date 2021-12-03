@@ -11,10 +11,10 @@ function TicketsUser() {
     const url = 'https://los-techos.herokuapp.com/api/upload';
 
     const handleSubmit = (e) => {
-        let pene = postImage["myFile"]
+        let str = postImage["myFile"]
         e.preventDefault();
         //createPost(postImage);
-        axios.put(url, {pImage: pene.split(",")[1], uId: localStorage.getItem("id")}, {headers: {"access-token": localStorage.getItem("access-token")}}).then(r => {console.log(r.data)});
+        axios.put(url, {pImage: str.split(",")[1], uId: localStorage.getItem("id")}, {headers: {"access-token": localStorage.getItem("access-token")}}).then(r => {console.log(r.data)});
     };
 
     const convertBase64=(file) => {
