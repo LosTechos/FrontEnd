@@ -57,7 +57,7 @@ function Navbar(){
                     </IconButton>
 
                     <Link to="/home">Home</Link>
-                    <Link to="/payments">Payments</Link>
+                    <Link to="/ticketsadmin">Payments</Link>
 
                     <Typography variant="h6" className={classes.title}>
                         
@@ -85,7 +85,7 @@ function Navbar(){
                         </IconButton>
     
                         <Link to="/home">Home</Link>
-                        <Link to="/payments">Payments</Link>
+                        <Link to="/ticketsuser">Payments</Link>
     
                         <Typography variant="h6" className={classes.title}>
                             
