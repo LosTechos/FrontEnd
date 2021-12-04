@@ -1,15 +1,15 @@
 import '../Assets/css/RegUserHouse.css'
 import axios from "axios";
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import {render} from '@testing-library/react';
-import {Component} from 'react';
+import { render } from '@testing-library/react';
+import { Component } from 'react';
 
 const url = "https://los-techos.herokuapp.com/api/"
 
 const RegisterForm = () => {
 
-    const [state= {
+    const [state = {
         data: [],
         form: {
             uName: "",
@@ -50,33 +50,33 @@ const RegisterForm = () => {
             <header className="Register-header">
                 <div className="containerMain">
                     <form className="user-form" onSubmit={peticionPost}>
-                        <h1>Create new user</h1>
+
                         <h3>Enter your personal information</h3>
                         <input name="uName" placeholder="Full Name" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.uName}/>
-                        
+                            onChange={handleChange} value={state.form.uName} />
+
                         <input name="uPwdHash" placeholder="Password" type="password" className="form-control"
-                               onChange={handleChange} value={state.form.uPwdHash}/>
-                        
+                            onChange={handleChange} value={state.form.uPwdHash} />
+
                         <input name="uEmail" placeholder="Mail" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.uEmail}/>
-                        
+                            onChange={handleChange} value={state.form.uEmail} />
+
                         <input name="uPhone" placeholder="Phone" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.uPhone}/>
-                        
+                            onChange={handleChange} value={state.form.uPhone} />
+
                         <input name="roId" placeholder="Role" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.roId}/>
+                            onChange={handleChange} value={state.form.roId} />
 
                         <h3>Enter your personal information</h3>
                         <input name="hNumber" placeholder="Exterior Number" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.hNumber}/>
-                        
+                            onChange={handleChange} value={state.form.hNumber} />
+
                         <input name="hAddress" placeholder="Street" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.hAddress}/>
-                        
+                            onChange={handleChange} value={state.form.hAddress} />
+
                         <input name="hMonthlyMount" placeholder="Monthly Amount" type="text" className="form-control"
-                               onChange={handleChange} value={state.form.hMonthlyMount}/>
-                        
+                            onChange={handleChange} value={state.form.hMonthlyMount} />
+
                         <button className="Submitbtn" type="submit">Submit User</button>
                     </form>
                 </div>

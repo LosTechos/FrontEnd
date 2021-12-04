@@ -1,33 +1,22 @@
-.Register {
-  text-align: center;
-  color: gray;
-}
-.user-form{
-  color: gray;
-}
-.house-form{
-  color: gray;
-}
-
 .containerMain {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
-  background: #faf9f9;
+  margin: auto;
   box-shadow: 100%;
   width: 20%;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, silver 0%, silver 15%, white 15%, white 100% );
+  background: white;
 }
 
 .form-control {
-
-  color: rgb(134, 133, 133);
-  background-color: rgb(231, 228, 228);
-  border-radius: 5px;
+  color: rgb(54, 55, 56);
+  background-color: rgb(237, 237, 248);
+  border-radius: 20px;
+  padding: 2%;
   border: none;
   
   width: 100%;
@@ -49,8 +38,9 @@ line-height: 1.5;
 
 .Submitbtn{
   color: white;
-  background-color: darkgray;
-  border-radius: 5px;
+  background-color: rgb(22, 161, 22);
+  border-radius: 20px;
+  padding: 2%;
   border: none;
   
   width: 100%;
@@ -68,23 +58,13 @@ font-size: 15px;
 }
 
 .Submitbtn:hover {
-  background-color: rgb(231, 231, 229);
-  color: rgb(151, 150, 150);
+  background-color: rgb(172, 228, 175);
+  color: rgb(235, 240, 235);
 }
 
 
 
-.Register-header {
-  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  color: white;
-  background-image: url(../img/back1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.head{
+  color:gray;
 }
