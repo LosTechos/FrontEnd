@@ -7,6 +7,12 @@
     background-color: white;
     border-color: black;
     padding: 1%;
+<<<<<<< HEAD
+    border-radius: 15px 15px 15px 15px;
+=======
+     border-radius: 15px 15px 15px 15px;
+>>>>>>> d87e61e3fabbf2d5025de829f0c1233502ae35ca
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .top-box{
