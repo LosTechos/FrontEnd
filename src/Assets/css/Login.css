@@ -27,6 +27,7 @@
   border-radius: 20px;
   padding: 2%;
   border: none;
+  padding-inline: 50px;
   
   width: 100%;
 display: -webkit-box;
@@ -47,6 +48,7 @@ line-height: 1.2;
 
 
 .loginbtn{
+
   color: white;
   background-color: rgb(22, 161, 22);
   border-radius: 20px;
