@@ -270,7 +270,7 @@ export default function PersistentDrawerLeft() {
     </ListItemIcon>
     <ListItemText primaryTypographyProps={{fontSize: '25px'}}  primary="Home" />
   </ListItem>
-  <ListItem component={Link} to="/ticketuser">
+  <ListItem component={Link} to="/debs">
     <ListItemIcon>
       <AssignmentIcon sx={{ fontSize: 35 }} />
     </ListItemIcon>

@@ -57,7 +57,7 @@ const DebUser = () => {
                             <div className="box-payment--error" >
                                 <p className="box-payment__main-text"> Late Payment </p>
                                 <p className="box-payment__price" >  $ {mAmount} mxn </p>
-                                <Link to="/payments" className="btnContainer">
+                                <Link to="/ticketuser" className="btnContainer">
                                     <Button color="Primary" variant="contained" className="btn">Upload Ticket</Button>
                                 </Link>
                                 <p className="box-payment__text-date"> Next payment date: November 10 2021 </p>
