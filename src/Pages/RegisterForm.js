@@ -1,6 +1,8 @@
 import '../Assets/css/RegUserHouse.css'
 import axios from "axios";
 import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+
 
 import { render } from '@testing-library/react';
 import { Component } from 'react';
@@ -47,6 +49,7 @@ const RegisterForm = () => {
     }
     return (
         <div className="Register">
+            <Navbar/>
             <header className="Register-header">
                 <div className="containerMain">
 

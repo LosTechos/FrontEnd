@@ -122,7 +122,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon sx={{ fontSize: 40}}/>
           </IconButton>
           <Typography variant="h4" noWrap component="div">
-            Josue Reaza ADMIN
+            ADMIN VIEW
           </Typography>
           <IconButton color="inherit" aria-label="Save">
             <AccountCircleRoundedIcon sx={{ fontSize: 40}}/>
@@ -165,7 +165,7 @@ export default function PersistentDrawerLeft() {
     </ListItemIcon>
     <ListItemText primaryTypographyProps={{fontSize: '25px'}} primary="Payments" />
   </ListItem>
-  <ListItem component={Link} to="/profile">
+  <ListItem component={Link} to="/profile"e>
     <ListItemIcon>
       <AccountCircleIcon sx={{ fontSize: 35 }} />
     </ListItemIcon>
@@ -233,7 +233,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon sx={{ fontSize: 40}}/>
           </IconButton>
           <Typography variant="h4" noWrap component="div">
-            Josue Reaza USER
+            USER VIEW
           </Typography>
           <IconButton color="inherit" aria-label="Save">
             <AccountCircleRoundedIcon sx={{ fontSize: 40}}/>
@@ -264,7 +264,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-  <ListItem component={Link} to="home">
+  <ListItem component={Link} to="/home">
     <ListItemIcon>
       <HomeIcon sx={{ fontSize: 35 }} />
     </ListItemIcon>
