@@ -49,8 +49,8 @@ const RegisterForm = () => {
         <div className="Register">
             <header className="Register-header">
                 <div className="containerMain">
-                    <form className="user-form" onSubmit={peticionPost}>
 
+                    <form className="user-form" onSubmit={peticionPost}>
                         <h3>Enter your personal information</h3>
                         <input name="uName" placeholder="Full Name" type="text" className="form-control"
                             onChange={handleChange} value={state.form.uName} />
@@ -77,7 +77,7 @@ const RegisterForm = () => {
                         <input name="hMonthlyMount" placeholder="Monthly Amount" type="text" className="form-control"
                             onChange={handleChange} value={state.form.hMonthlyMount} />
 
-                        <button className="Submitbtn" type="submit">Submit User</button>
+                        <button className="Submitbtn" type="submit">Create User</button>
                     </form>
                 </div>
             </header>
