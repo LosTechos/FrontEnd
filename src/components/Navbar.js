@@ -110,7 +110,7 @@ export default function PersistentDrawerLeft() {
         return (
             <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar style={{background: "white", color:"blue"}} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -122,7 +122,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon sx={{ fontSize: 40}}/>
           </IconButton>
           <Typography variant="h4" noWrap component="div">
-            ADMIN VIEW
+            
           </Typography>
           <IconButton color="inherit" aria-label="Save">
             <AccountCircleRoundedIcon sx={{ fontSize: 40}}/>
@@ -189,30 +189,6 @@ export default function PersistentDrawerLeft() {
 </List>
   
       </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
-        
-        <Carousel autoPlay height="200px" width= "400px" length= "400px">
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 3</p>
-                </div>
-            </Carousel>
-        <Typography paragraph>
-          Lorem 
-        </Typography>
-        <Typography paragraph>
-          Consequat
-        </Typography>
-      </Main>
     
 </Box>
         
@@ -221,7 +197,7 @@ export default function PersistentDrawerLeft() {
         return (
             <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar style={{background: "white", color:"blue"}} position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -233,7 +209,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon sx={{ fontSize: 40}}/>
           </IconButton>
           <Typography variant="h4" noWrap component="div">
-            USER VIEW
+            
           </Typography>
           <IconButton color="inherit" aria-label="Save">
             <AccountCircleRoundedIcon sx={{ fontSize: 40}}/>
@@ -282,6 +258,7 @@ export default function PersistentDrawerLeft() {
     </ListItemIcon>
     <ListItemText primaryTypographyProps={{fontSize: '25px'}} primary="Profile" />
   </ListItem>
+  
 </List>
         <Divider />
         <List>
@@ -297,26 +274,8 @@ export default function PersistentDrawerLeft() {
       <Main open={open}>
         <DrawerHeader />
         
-        <Carousel autoPlay height="200px" width= "400px" length= "400px">
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src= {slogo}  />
-                    <p className="legend">Legend 3</p>
-                </div>
-            </Carousel>
-        <Typography paragraph>
-          Lorem 
-        </Typography>
-        <Typography paragraph>
-          Consequat
-        </Typography>
+        
+        
       </Main>
     
 </Box>

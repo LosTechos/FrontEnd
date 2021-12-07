@@ -54,7 +54,7 @@ const RegisterForm = () => {
                 <div className="containerMain">
 
                     <form className="user-form" onSubmit={peticionPost}>
-                        <h3>Enter your personal information</h3>
+                        <h3>Enter the ocupant information</h3>
                         <input name="uName" placeholder="Full Name" type="text" className="form-control"
                             onChange={handleChange} value={state.form.uName} />
 
@@ -70,7 +70,7 @@ const RegisterForm = () => {
                         <input name="roId" placeholder="Role" type="text" className="form-control"
                             onChange={handleChange} value={state.form.roId} />
 
-                        <h3>Enter your personal information</h3>
+                        <h3>Enter the house information</h3>
                         <input name="hNumber" placeholder="Exterior Number" type="text" className="form-control"
                             onChange={handleChange} value={state.form.hNumber} />
 

@@ -64,7 +64,7 @@ class Login extends React.Component {
                     <header className="Login-header">
                         <form onSubmit={this.handlerSubmit}>
                             <div className="container">
-                                <h1>Welcome!</h1>
+                                <text>Welcome!</text>
                                 <div className="form-group">
                                     <input className="loginplace" placeholder="Name" type="text" name="uName"
                                            onChange={this.handlerChange}/>

@@ -18,25 +18,25 @@ const DebUser = () => {
     };
 
 
-    useEffect(async () => {
-        const id = localStorage.getItem("roId")
-        const data = await UseGetDebs(id);
+    //useEffect(async () => {
+        //const id = localStorage.getItem("roId")
+        //const data = await UseGetDebs(id);
 
-        if (Array.isArray(data)) {
-            const { hDebt, isPaid } = data[0];
-            setmAmount(hDebt);
+        //if (Array.isArray(data)) {
+            //const { hDebt, isPaid } = data[0];
+            //setmAmount(hDebt);
 
-            if (isPaid) {
-                setShowBox(true);
-            }
-            else {
-                setShowBox(false);
-            }
-        } else if (isObject(data)) {
-            setError(true);
+            //if (isPaid) {
+                //setShowBox(true);
+            //}
+            //else {
+                //setShowBox(false);
+            //}
+        //} else if (isObject(data)) {
+            //setError(true);
 
-        }
-    }, [])
+        //}
+    //}, [])
 
 
     return (
@@ -57,7 +57,7 @@ const DebUser = () => {
                             <div className="box-payment--error" >
                                 <p className="box-payment__main-text"> Late Payment </p>
                                 <p className="box-payment__price" >  $ {mAmount} mxn </p>
-                                <Link to="/ticketuser" className="btnContainer">
+                                <Link to="/ticketsuser" className="btnContainer">
                                     <Button color="Primary" variant="contained" className="btn">Upload Ticket</Button>
                                 </Link>
                                 <p className="box-payment__text-date"> Next payment date: December 10 2021 </p>
