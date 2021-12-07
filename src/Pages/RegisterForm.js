@@ -1,7 +1,13 @@
 import '../Assets/css/RegUserHouse.css'
 import axios from "axios";
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
+=======
+import Navbar from '../components/Navbar';
+
+
+>>>>>>> 697f910440c46641668ee6122de530a35276c11d
 import { render } from '@testing-library/react';
 import { Component } from 'react';
 
@@ -47,10 +53,15 @@ const RegisterForm = () => {
     }
     return (
         <div className="Register">
+            <Navbar/>
             <header className="Register-header">
                 <div className="containerMain">
-                    <form className="user-form" onSubmit={peticionPost}>
 
+                    <form className="user-form" onSubmit={peticionPost}>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 697f910440c46641668ee6122de530a35276c11d
                         <h3>Enter your personal information</h3>
                         <input name="uName" placeholder="Full Name" type="text" className="form-control"
                             onChange={handleChange} value={state.form.uName} />
@@ -77,7 +88,11 @@ const RegisterForm = () => {
                         <input name="hMonthlyMount" placeholder="Monthly Amount" type="text" className="form-control"
                             onChange={handleChange} value={state.form.hMonthlyMount} />
 
+<<<<<<< HEAD
                         <button className="Submitbtn" type="submit">Submit User</button>
+=======
+                        <button className="Submitbtn" type="submit">Create User</button>
+>>>>>>> 697f910440c46641668ee6122de530a35276c11d
                     </form>
                 </div>
             </header>

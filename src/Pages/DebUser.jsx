@@ -60,7 +60,7 @@ const DebUser = () => {
                                 <Link to="/ticketuser" className="btnContainer">
                                     <Button color="Primary" variant="contained" className="btn">Upload Ticket</Button>
                                 </Link>
-                                <p className="box-payment__text-date"> Next payment date: November 10 2021 </p>
+                                <p className="box-payment__text-date"> Next payment date: December 10 2021 </p>
                             </div>
                 }
             </Container>
